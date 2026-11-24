@@ -52,7 +52,6 @@
     --color-secondary-container: #ff5c47;
     --color-secondary-fixed: #ffdad4;
     --color-secondary-fixed-dim: #ffb4a8;
-    --color-surface: #fbf8fc;
     --color-surface-bright: #fbf8fc;
     --color-surface-container: #f0edf1;
     --color-surface-container-high: #eae7eb;
@@ -180,6 +179,10 @@
 }
 
 @layer components {
+    .reference-page {
+        --color-surface: #fbf8fc;
+    }
+
     .reference-page .rounded {
         border-radius: 0.125rem;
     }
