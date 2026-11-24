@@ -1,0 +1,484 @@
+@verbatim
+<div class="flex flex-col w-full">
+<!-- Top Visual Scrim & Header Zone -->
+<section class="relative w-full bg-surface-container-low overflow-hidden pb-space-xl pt-space-lg">
+<div class="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none"></div>
+<div class="absolute -right-20 -top-24 w-96 h-96 rounded-full bg-secondary-container/10 blur-3xl pointer-events-none"></div>
+<div class="max-w-[1440px] mx-auto px-margin relative">
+<!-- Breadcrumb -->
+<nav class="flex items-center gap-2 font-label-md text-label-md text-on-surface-variant mb-space-md">
+<a class="hover:text-primary transition-colors flex items-center gap-1" data-path="beranda" href="#">
+<span class="material-symbols-outlined text-[16px]">home</span>
+<span>Beranda</span>
+</a>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<span class="text-primary font-bold">Perpustakaan</span>
+</nav>
+<!-- Main Header Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-end mb-space-xl">
+<div class="lg:col-span-8 flex flex-col gap-space-xs">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary w-fit font-label-sm text-label-sm tracking-wider uppercase">
+<span class="material-symbols-outlined text-[14px]">local_library</span>
+<span>Repositori Arsip &amp; Diskursus Marhaenis</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight mt-1">
+            Perpustakaan Digital Marhaenis
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mt-2 leading-relaxed">
+            Pusat arsip literatur ideologis, karya monumental pemikiran Bung Karno, jurnal ilmiah, naskah manifesto, dan dokumen kajian advokasi kebijakan publik DPC GMNI Sukabumi Raya.
+          </p>
+</div>
+<div class="lg:col-span-4 flex lg:justify-end">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center gap-4 w-full sm:w-auto">
+<div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-on-primary shrink-0">
+<span class="material-symbols-outlined text-[24px]">menu_book</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Koleksi Terbuka</p>
+<p class="font-headline-md text-headline-md text-on-surface">142 Dokumen</p>
+<p class="font-body-sm text-body-sm text-primary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+                Akses Publik &amp; Kader Bebas
+              </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Live Search Module -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-md">
+<form class="flex flex-col md:flex-row items-center gap-2" onsubmit="event.preventDefault();">
+<div class="relative flex-1 w-full flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-on-surface-variant text-[22px]">search</span>
+<input class="w-full pl-12 pr-4 py-3.5 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface placeholder-on-surface-variant/70 focus:outline-none focus:bg-surface-container-highest transition-colors" id="library-search-input" placeholder="Cari judul buku, riset, naskah pidato, atau kata kunci (contoh: Reforma Agraria, Sarinah, MIM)..." type="text">
+</div>
+<div class="flex items-center gap-2 w-full md:w-auto">
+<button class="w-full md:w-auto px-space-lg py-3.5 bg-primary hover:bg-secondary text-on-primary font-label-lg text-label-lg rounded-lg transition-all shadow-sm flex items-center justify-center gap-2 whitespace-nowrap" type="submit">
+<span class="material-symbols-outlined text-[18px]">manage_search</span>
+<span>Temukan Literatur</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Quick Filter Pills -->
+<div class="flex items-center gap-2 mt-space-md overflow-x-auto pb-2 scrollbar-none" id="category-pills">
+<button class="filter-pill active px-4 py-2 rounded-full font-label-md text-label-md transition-all whitespace-nowrap bg-primary text-on-primary shadow-sm" data-filter="all">
+          Semua Koleksi (142)
+        </button>
+<button class="filter-pill px-4 py-2 rounded-full font-label-md text-label-md transition-all whitespace-nowrap bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" data-filter="bung-karno">
+          Karya Bung Karno (18)
+        </button>
+<button class="filter-pill px-4 py-2 rounded-full font-label-md text-label-md transition-all whitespace-nowrap bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" data-filter="marhaenisme">
+          Ideologi &amp; Marhaenisme (34)
+        </button>
+<button class="filter-pill px-4 py-2 rounded-full font-label-md text-label-md transition-all whitespace-nowrap bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" data-filter="agraria">
+          Ekonomi &amp; Agraria (26)
+        </button>
+<button class="filter-pill px-4 py-2 rounded-full font-label-md text-label-md transition-all whitespace-nowrap bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" data-filter="kebijakan">
+          Kajian Kebijakan Daerah (41)
+        </button>
+<button class="filter-pill px-4 py-2 rounded-full font-label-md text-label-md transition-all whitespace-nowrap bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" data-filter="kaderisasi">
+          Modul PPAB / KTD (15)
+        </button>
+<button class="filter-pill px-4 py-2 rounded-full font-label-md text-label-md transition-all whitespace-nowrap bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" data-filter="jurnal">
+          Jurnal &amp; Riset (8)
+        </button>
+</div>
+</div>
+</section>
+<!-- Featured Masterpiece Spotlight -->
+<section class="w-full max-w-[1440px] mx-auto px-margin py-space-xl">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-3">
+<span class="w-3 h-3 rounded-full bg-primary animate-pulse"></span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Koleksi Wajib Baca Kader</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest hidden sm:inline-block">Silabus Referensi Utama</span>
+</div>
+<!-- Big Masterpiece Card -->
+<div class="bg-inverse-surface text-inverse-on-surface rounded-xl overflow-hidden shadow-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+<!-- Visual Column -->
+<div class="lg:col-span-5 relative min-h-[380px] lg:min-h-[440px] bg-surface-dim overflow-hidden flex items-center justify-center p-space-lg">
+<div class="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-multiply" data-alt="Vintage archival Indonesian independence historical manuscripts, leather bound antique revolution books with red tones, dramatic studio library lighting, high contrast scholarly atmosphere" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBbZu2IWzRCrrZYcoTcl_b6xX5VzAXprz9v0sG-zstnCqJXEAXVprnVvFV5hDxuTsJvpi6LmF9sz-KtoIuEQwyaJrNlzX98kdkF5gToXpYT2iCmZFlx-nd6JrBlyY9yIfCRlVfCNOMaa-qZaYx3_ifJSAMofdrXbLKMSG7yVk3F8MJHv9-q0neMOV1vCX-iDRCANP92BnRJHQP-ZV2GdMz5CkL-n-BfYNmgHR0fiHI&quot;);"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface via-inverse-surface/40 to-transparent"></div>
+<!-- Realistic Book Mockup Element -->
+<div class="relative z-10 w-56 sm:w-64 aspect-[3/4] bg-surface-container-lowest rounded-lg shadow-2xl p-4 flex flex-col justify-between text-on-surface transform hover:scale-105 transition-transform duration-300">
+<div class="flex justify-between items-start">
+<span class="font-label-sm text-label-sm text-primary tracking-widest uppercase">Klasik Ideologi</span>
+<span class="material-symbols-outlined text-primary text-[20px]">auto_stories</span>
+</div>
+<div class="my-auto py-4">
+<div class="w-8 h-1 bg-primary mb-3"></div>
+<h3 class="font-headline-sm text-headline-sm font-bold leading-tight">Di Bawah Bendera Revolusi</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">Jilid Pertama &amp; Kedua</p>
+<p class="font-body-sm text-body-sm text-secondary font-semibold mt-3">Ir. Soekarno</p>
+</div>
+<div class="pt-3 border-t-0 flex items-center justify-between text-[11px] font-label-sm text-outline">
+<span>Edisi Master Digital</span>
+<span class="text-primary font-bold">DPC GMNI</span>
+</div>
+</div>
+</div>
+<!-- Meta Content Column -->
+<div class="lg:col-span-7 p-space-lg lg:p-space-xl flex flex-col justify-between">
+<div>
+<div class="flex flex-wrap items-center gap-2 mb-space-sm">
+<span class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary font-label-sm text-label-sm uppercase tracking-wider">
+                Koleksi Wajib Ideologi
+              </span>
+<span class="px-3 py-1 rounded-full bg-surface-container-highest/20 text-tertiary-fixed font-label-sm text-label-sm">
+                Pedoman Doktrin Marhaenisme
+              </span>
+<span class="px-3 py-1 rounded-full bg-surface-container-highest/10 text-inverse-on-surface/80 font-label-sm text-label-sm">
+                Arsip Nasional
+              </span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-surface-container-lowest leading-tight mb-2">
+              Di Bawah Bendera Revolusi (Jilid I &amp; II)
+            </h3>
+<p class="font-headline-sm text-headline-sm text-tertiary-fixed-dim font-medium mb-space-md">
+              Karya Monumental Bung Karno (1926 - 1965)
+            </p>
+<p class="font-body-md text-body-md text-inverse-on-surface/85 leading-relaxed mb-space-lg">
+              Kompilasi naskah otentik tulisan, orasi ilmiah, serta pidato pemikiran Bung Karno dalam fase pergolakan kebangsaan Indonesia. Menguraikan pondasi dialektika Sosio-Nasionalisme, Sosio-Demokrasi, dan Ketuhanan yang Berkebudayaan sebagai antitesis terhadap kolonialisme, imperialisme, dan kapitalisme modern.
+            </p>
+<!-- Specification Badges -->
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-space-lg">
+<div class="bg-surface-container-highest/10 rounded-lg p-3">
+<p class="font-label-sm text-label-sm text-outline-variant uppercase">Ketebalan</p>
+<p class="font-headline-sm text-headline-sm text-surface-container-lowest">654 Halaman</p>
+</div>
+<div class="bg-surface-container-highest/10 rounded-lg p-3">
+<p class="font-label-sm text-label-sm text-outline-variant uppercase">Format Berkas</p>
+<p class="font-headline-sm text-headline-sm text-surface-container-lowest">PDF Digital OCR</p>
+</div>
+<div class="bg-surface-container-highest/10 rounded-lg p-3 col-span-2 sm:col-span-1">
+<p class="font-label-sm text-label-sm text-outline-variant uppercase">Hak Akses</p>
+<p class="font-headline-sm text-headline-sm text-tertiary-fixed">Terbuka Bebas</p>
+</div>
+</div>
+</div>
+<!-- CTAs -->
+<div class="flex flex-wrap items-center gap-space-sm pt-space-sm">
+<button class="px-space-lg py-3 rounded-lg bg-primary hover:bg-secondary text-on-primary font-label-lg text-label-lg transition-all shadow-md flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">chrome_reader_mode</span>
+<span>Baca Online (Viewer)</span>
+</button>
+<button class="px-space-lg py-3 rounded-lg bg-surface-container-highest/20 hover:bg-surface-container-highest/30 text-surface-container-lowest font-label-lg text-label-lg transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">download</span>
+<span>Unduh Arsip Lengkap (48 MB)</span>
+</button>
+<button class="p-3 rounded-lg bg-surface-container-highest/10 hover:bg-surface-container-highest/20 text-inverse-on-surface transition-colors" title="Bagikan Tautan">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Curated Collection Directory -->
+<section class="w-full max-w-[1440px] mx-auto px-margin pb-space-xl">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-sm mb-space-lg">
+<div>
+<p class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Katalog Kurasi Cabang</p>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-1">Daftar Pustaka &amp; Hasil Riset Marhaenis</h2>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Urutkan:</span>
+<select class="bg-surface-container-lowest text-on-surface font-label-md text-label-md px-3 py-1.5 rounded-lg focus:outline-none shadow-sm cursor-pointer">
+<option>Paling Relevan</option>
+<option>Terbitan Terbaru</option>
+<option>Kategori A - Z</option>
+<option>Paling Banyak Diunduh</option>
+</select>
+</div>
+</div>
+<!-- Catalog Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-gutter" id="catalog-container">
+<!-- Card 1: Indonesia Menggugat -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col justify-between group" data-category="bung-karno">
+<div>
+<div class="relative w-full h-48 bg-surface-container-high rounded-lg overflow-hidden mb-space-sm flex items-center justify-center">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-300" data-alt="Historical portrait and document representation of Bung Karno courtroom defense speech in Bandung 1930, vintage tone, sepia red contrast, dramatic lighting" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBXEnCkUtgO6-87iyA8q9u10E_fZdOTe26xRUz9JhVKOmSukQaKDxD4yLNvWla_EbHDoCQ0_NNQjcVyQ2HSqpQRh3Abh39DgG-_h7r_XZttBykyC3pWOfJlgE0d0ZLhVHJIzPZr-LVzRWnNZuYX_bGSgkoc8WJGgj1HqHhFxKbbPwCJ92a_vc3gRTBpa7K5EhT5YQ4O6cIcGvqCMNAiaVFa9rLgUbV1KAidH42jufc&quot;);"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/90 via-on-surface/40 to-transparent"></div>
+<span class="absolute top-3 left-3 px-2.5 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider">
+              Buku Pokok
+            </span>
+<div class="absolute bottom-3 left-3 right-3 text-surface-container-lowest">
+<span class="font-label-sm text-label-sm text-tertiary-fixed tracking-wide">Pleidoi 1930 Landraad Bandung</span>
+<p class="font-headline-sm text-headline-sm leading-tight text-white font-bold">Indonesia Menggugat</p>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mb-2">
+<span class="text-primary font-semibold">Ir. Soekarno</span>
+<span>1930 • 188 Hlm</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3 mb-space-md">
+            Pidato pembelaan spektakuler Bung Karno di hadapan pengadilan kolonial Belanda, membedah secara saintifik watak imperialism dan penghisapan ekonomi rakyat Hindia Belanda.
+          </p>
+</div>
+<div class="pt-space-sm flex items-center gap-2">
+<button class="flex-1 py-2 px-3 rounded bg-primary text-on-primary hover:bg-secondary font-label-md text-label-md transition-colors flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Baca Naskah</span>
+</button>
+<button class="p-2 rounded bg-surface-container hover:bg-surface-container-highest text-on-surface transition-colors" title="Unduh Berkas PDF">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+</button>
+</div>
+</article>
+<!-- Card 2: Mencapai Indonesia Merdeka -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col justify-between group" data-category="bung-karno">
+<div>
+<div class="relative w-full h-48 bg-surface-container-high rounded-lg overflow-hidden mb-space-sm flex items-center justify-center">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-300" data-alt="Political treatise book cover Mencapai Indonesia Merdeka with typography and red socialist Indonesian independence struggle aesthetics" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAjdPYXoJGc2o5uB5KqV8oz1BzyW9Mk4WL74Qzyb4rUW47nWQakBX_epXfjPaU0a7o-kOWxzf2Hrk5njTa-XLto-g1x0YwMoecrXWiOVPKB99GvSF9EfmdOqhiXEzveU2mB-1gCaTpdPTAVwEGm4iXFLtPiUhfLYpxhlf1nCXSv0n5fMvNgJhezEp_0LJEPHGFH7TQowPdjX8j3da7_G02APov7LT6qO58wY51NCDk&quot;);"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/90 via-on-surface/40 to-transparent"></div>
+<span class="absolute top-3 left-3 px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary font-label-sm text-label-sm uppercase tracking-wider">
+              Risalah Strategi
+            </span>
+<div class="absolute bottom-3 left-3 right-3 text-surface-container-lowest">
+<span class="font-label-sm text-label-sm text-tertiary-fixed tracking-wide">Analisis Taktik Gerakan</span>
+<p class="font-headline-sm text-headline-sm leading-tight text-white font-bold">Mencapai Indonesia Merdeka</p>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mb-2">
+<span class="text-primary font-semibold">Ir. Soekarno</span>
+<span>1933 • 92 Hlm</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3 mb-space-md">
+            Panduan metodologis mendasar mengenai jembatan emas kemerdekaan nasional, memaparkan formasi massa aksi, partai pelopor, serta perlawanan non-kooperatif terhadap penindasan.
+          </p>
+</div>
+<div class="pt-space-sm flex items-center gap-2">
+<button class="flex-1 py-2 px-3 rounded bg-primary text-on-primary hover:bg-secondary font-label-md text-label-md transition-colors flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Baca Naskah</span>
+</button>
+<button class="p-2 rounded bg-surface-container hover:bg-surface-container-highest text-on-surface transition-colors" title="Unduh Berkas PDF">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+</button>
+</div>
+</article>
+<!-- Card 3: Sarinah -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col justify-between group" data-category="marhaenisme">
+<div>
+<div class="relative w-full h-48 bg-surface-container-high rounded-lg overflow-hidden mb-space-sm flex items-center justify-center">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-300" data-alt="Cover of book Sarinah Bung Karno progressive Indonesian women movement philosophy, historical portraiture, red and cream tone, dignified representation" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBfi4R9tBjq1JZpyfMM_KNdrYEyMmEOFHI-raCXZZ1a9DMBooLDxi-fA4ok-reHGep18ZNV6BeT7BdNcFo5U9Fl0dNU3afNRLGuLJjo-wDnS6vqLgsvy16wUcPrlHVUHaGbL-y40nlRCsEENfTsUh_NoYCLqaXOgB0lFG2IFB3XyE7vgH_2gcKVE351RYwQUCc8jxLBAR021lF-3BygB7e5AC8mvsvOLSJo72IXsDg&quot;);"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/90 via-on-surface/40 to-transparent"></div>
+<span class="absolute top-3 left-3 px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm uppercase tracking-wider">
+              Gerakan Perempuan
+            </span>
+<div class="absolute bottom-3 left-3 right-3 text-surface-container-lowest">
+<span class="font-label-sm text-label-sm text-tertiary-fixed tracking-wide">Kewajiban Wanita RI</span>
+<p class="font-headline-sm text-headline-sm leading-tight text-white font-bold">Sarinah</p>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mb-2">
+<span class="text-primary font-semibold">Ir. Soekarno</span>
+<span>1947 • 342 Hlm</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3 mb-space-md">
+            Kajian progresif tentang emansipasi perempuan dalam bingkai perjuangan kelas dan revolusi sosial, menolak subordinasi domestik demi kedaulatan bangsa seutuhnya.
+          </p>
+</div>
+<div class="pt-space-sm flex items-center gap-2">
+<button class="flex-1 py-2 px-3 rounded bg-primary text-on-primary hover:bg-secondary font-label-md text-label-md transition-colors flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Baca Naskah</span>
+</button>
+<button class="p-2 rounded bg-surface-container hover:bg-surface-container-highest text-on-surface transition-colors" title="Unduh Berkas PDF">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+</button>
+</div>
+</article>
+<!-- Card 4: Dialektika Marhaenisme dalam Transformasi Agraria di Sukabumi -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col justify-between group" data-category="agraria">
+<div>
+<div class="relative w-full h-48 bg-surface-container-high rounded-lg overflow-hidden mb-space-sm flex items-center justify-center">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-300" data-alt="Agricultural landscape of Sukabumi West Java with tea plantations, farmers organizing in field, academic research book cover composition with clean geometric red overlays" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuB30k4CJpbyrNUDYTM5-rKIrGgilOuNDZtCUf6WQyS4uip_qX5bcnDHS2p15UKNYvl5WlyzBqAo6DnMJWYC_eQqlifLGZJg2CnWP_oac6Kd9QUV1TG0HSf1lOVbs4fG0OLMrJ7aXaLQK5wJI9mPOJuVQTCiS7n1hdxFPNR5uFtu-r6erjNpakhttIVrNv0Z9qrMGlOhEFtdsjIVQHz4vDqC17Q25GEcY5fTsXN-d0c&quot;);"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/90 via-on-surface/40 to-transparent"></div>
+<span class="absolute top-3 left-3 px-2.5 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm uppercase tracking-wider">
+              Kajian Agraria
+            </span>
+<div class="absolute bottom-3 left-3 right-3 text-surface-container-lowest">
+<span class="font-label-sm text-label-sm text-tertiary-fixed tracking-wide">Riset DPC Sukabumi Raya</span>
+<p class="font-headline-sm text-headline-sm leading-tight text-white font-bold">Transformasi Agraria Sukabumi</p>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mb-2">
+<span class="text-primary font-semibold">Bung Rayhan (DPC)</span>
+<span>2024 • 146 Hlm</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3 mb-space-md">
+            Dokumentasi sengketa lahan perkebunan, redistribusi tanah rakyat di Cikembar dan Jampang, serta penerapan prinsip UUPA 1960 ditinjau dari kacamata Marhaenisme.
+          </p>
+</div>
+<div class="pt-space-sm flex items-center gap-2">
+<button class="flex-1 py-2 px-3 rounded bg-primary text-on-primary hover:bg-secondary font-label-md text-label-md transition-colors flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Baca Naskah</span>
+</button>
+<button class="p-2 rounded bg-surface-container hover:bg-surface-container-highest text-on-surface transition-colors" title="Unduh Berkas PDF">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+</button>
+</div>
+</article>
+<!-- Card 5: Analisis Kritis APBD Pendidikan Sukabumi -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col justify-between group" data-category="kebijakan">
+<div>
+<div class="relative w-full h-48 bg-surface-container-high rounded-lg overflow-hidden mb-space-sm flex items-center justify-center">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-300" data-alt="Data analytics paper charts and public policy brief document regarding regional education budget analysis, clean editorial graphics, professional crimson palette" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDjsRKzpCpq3yMif0PCiLaOun2QPkzYhgxN0bUrexOF5x8jYuj3cupvIbyCoJVJ7HyrXX3DzW-HK-yP--mAEoxc9_5lfRI-awZGlL7axTNbSWRc-R_4mI3yj1HxnO2oWA7zw0C5TWZbh7Y3xZZ1x2cmPpdGc-J4NYSZ4xNb7ww0zSDZXZyLeFYcVa-NZOvZPmzTzewQMrm8GQRqLza7jd8KBgQ3K9tFvPHs31o89is&quot;);"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/90 via-on-surface/40 to-transparent"></div>
+<span class="absolute top-3 left-3 px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider">
+              Kajian Kebijakan
+            </span>
+<div class="absolute bottom-3 left-3 right-3 text-surface-container-lowest">
+<span class="font-label-sm text-label-sm text-tertiary-fixed tracking-wide">Kertas Kebijakan Cabang</span>
+<p class="font-headline-sm text-headline-sm leading-tight text-white font-bold">Analisis Alokasi APBD Edukasi</p>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mb-2">
+<span class="text-primary font-semibold">Sarinah Fatimah (DPC)</span>
+<span>2024 • 84 Hlm</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3 mb-space-md">
+            Tinjauan mendalam ketimpangan fasilitas pendidikan sekolah dasar di wilayah Sukabumi Selatan berbanding alokasi belanja birokrasi pemerintahan daerah.
+          </p>
+</div>
+<div class="pt-space-sm flex items-center gap-2">
+<button class="flex-1 py-2 px-3 rounded bg-primary text-on-primary hover:bg-secondary font-label-md text-label-md transition-colors flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Baca Naskah</span>
+</button>
+<button class="p-2 rounded bg-surface-container hover:bg-surface-container-highest text-on-surface transition-colors" title="Unduh Berkas PDF">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+</button>
+</div>
+</article>
+<!-- Card 6: Modul Silabus KTD Resmi -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col justify-between group" data-category="kaderisasi">
+<div>
+<div class="relative w-full h-48 bg-surface-container-high rounded-lg overflow-hidden mb-space-sm flex items-center justify-center">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-300" data-alt="Official cadre training handbook manual with Indonesian nationalist red badge symbol, clean structured educational syllabus design" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDXB7aM5MA_ktMj-CF5BT_oXtZK6lsFatrsR81T6Mz8ZdAtY1WNTCRyyb1k6wph21v5CEmtk9ZwSrdDy2GYZ97HRdpmhjdn9o3SeFUP21MKFD34X6Ds72iEtguUS14gYQSC_lE65lqgsYwI_zukW0ViUSllkdJp8fQDRGR4kcHgJgK8fWNJDqDtroAI-ymh41zBn7RG6LPkYulxSfRsfpQA2nHR9ka6xCV6S4mNNiA&quot;);"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/90 via-on-surface/40 to-transparent"></div>
+<span class="absolute top-3 left-3 px-2.5 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider">
+              Buku Pegangan Kader
+            </span>
+<div class="absolute bottom-3 left-3 right-3 text-surface-container-lowest">
+<span class="font-label-sm text-label-sm text-tertiary-fixed tracking-wide">Silabus Resmi DPC</span>
+<p class="font-headline-sm text-headline-sm leading-tight text-white font-bold">Modul Kaderisasi KTD</p>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mb-2">
+<span class="text-primary font-semibold">Bidang Kaderisasi DPC</span>
+<span>2024 • 210 Hlm</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3 mb-space-md">
+            Kurikulum terpadu Kaderisasi Tingkat Dasar (KTD): Materialisme Historis Dialektis (MHD), Analisis Sosial Marhaenis, Tata Kelola Organisasi, dan Retorika Propaganda.
+          </p>
+</div>
+<div class="pt-space-sm flex items-center gap-2">
+<button class="flex-1 py-2 px-3 rounded bg-primary text-on-primary hover:bg-secondary font-label-md text-label-md transition-colors flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Baca Naskah</span>
+</button>
+<button class="p-2 rounded bg-surface-container hover:bg-surface-container-highest text-on-surface transition-colors" title="Unduh Berkas PDF">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+</button>
+</div>
+</article>
+<!-- Card 7: Ekonomi Kerakyatan vs Neoliberalisme Oligarki Daerah -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col justify-between group" data-category="jurnal">
+<div>
+<div class="relative w-full h-48 bg-surface-container-high rounded-lg overflow-hidden mb-space-sm flex items-center justify-center">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-300" data-alt="Journal cover featuring graphic chart comparison between people economy cooperatives and oligarchic corporate mining in coastal West Java, crisp red tones" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCnaYrQs877u0fLzLSjsCI3PNGz0ZD1W6aU1IPMicP2oqNnxz_TYUoeOzTt4dLyYfaqlAyI7xl8nzJ4W42O8mYwk_i9fYD5RIEeKlVLtaWlAYhQovXdRb66a-OiOmhewYTzmGv_RfCWrqFos3HgDeIqiTJEo-ZjVomh3_QuFDd5sryYfEXxKaZ5xmhFE6m7lJz-92LZuzhnuI5m-7oxa77ik0KVOX4_t8b6stzWUg8&quot;);"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/90 via-on-surface/40 to-transparent"></div>
+<span class="absolute top-3 left-3 px-2.5 py-0.5 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm uppercase tracking-wider">
+              Jurnal Ilmiah
+            </span>
+<div class="absolute bottom-3 left-3 right-3 text-surface-container-lowest">
+<span class="font-label-sm text-label-sm text-tertiary-fixed tracking-wide">Jurnal Marhaenis Vol. IV</span>
+<p class="font-headline-sm text-headline-sm leading-tight text-white font-bold">Ekonomi Kerakyatan vs Oligarki</p>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mb-2">
+<span class="text-primary font-semibold">Lembaga Riset Marhaen</span>
+<span>2024 • 118 Hlm</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3 mb-space-md">
+            Studi komparasi daya tahan UMKM pedesaan Sukabumi menghadapi ekspansi monopoli minimarket modern serta perampasan ruang hidup pesisir Pelabuhanratu.
+          </p>
+</div>
+<div class="pt-space-sm flex items-center gap-2">
+<button class="flex-1 py-2 px-3 rounded bg-primary text-on-primary hover:bg-secondary font-label-md text-label-md transition-colors flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Baca Naskah</span>
+</button>
+<button class="p-2 rounded bg-surface-container hover:bg-surface-container-highest text-on-surface transition-colors" title="Unduh Berkas PDF">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+</button>
+</div>
+</article>
+<!-- Card 8: Panduan Penulisan Kertas Posisi Advokasi -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col justify-between group" data-category="kaderisasi">
+<div>
+<div class="relative w-full h-48 bg-surface-container-high rounded-lg overflow-hidden mb-space-sm flex items-center justify-center">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-300" data-alt="Activist writing manual book cover with typewriter keys and modern tablet showing legal defense brief for agrarian communities, warm library illumination" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuD6p1Jin6MEwKjOErXJTJkRH6nt1NLzKGbNGF0WxY3UZQf-x2w2SFe0HvYklSpxRtlqBV95cNWMqgW4Q4O8DI94brPir7AbTwgN1xN3QHhy9d9GByeQztWnrL2DU5cml7ax1Vhotkub0LBC5fNAMWfbTuQQ-MpL2AR6QpR0KxBK8q0jVZFMuzkNjwRDDB81KiMnVaJjb7p25YhrY2EFs2UlLd7gRBKtCBl0IAQ97Kk&quot;);"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/90 via-on-surface/40 to-transparent"></div>
+<span class="absolute top-3 left-3 px-2.5 py-0.5 rounded-full bg-outline/20 text-on-surface font-label-sm text-label-sm uppercase tracking-wider">
+              Pedoman Praktis
+            </span>
+<div class="absolute bottom-3 left-3 right-3 text-surface-container-lowest">
+<span class="font-label-sm text-label-sm text-tertiary-fixed tracking-wide">Litigasi &amp; Non-Litigasi</span>
+<p class="font-headline-sm text-headline-sm leading-tight text-white font-bold">Panduan Advokasi Rakyat</p>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mb-2">
+<span class="text-primary font-semibold">Biro Hukum &amp; HAM DPC</span>
+<span>2023 • 96 Hlm</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3 mb-space-md">
+            Format metodis perumusan kertas posisi, siaran pers, kronologi kasus konflik agraria, dan tata cara pendampingan kaum marhaen di hadapan pemangku kuasa.
+          </p>
+</div>
+<div class="pt-space-sm flex items-center gap-2">
+<button class="flex-1 py-2 px-3 rounded bg-primary text-on-primary hover:bg-secondary font-label-md text-label-md transition-colors flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Baca Naskah</span>
+</button>
+<button class="p-2 rounded bg-surface-container hover:bg-surface-container-highest text-on-surface transition-colors" title="Unduh Berkas PDF">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+</button>
+</div>
+</article>
+</div>
+<!-- Pagination / Show More -->
+<div class="mt-space-xl flex flex-col sm:flex-row items-center justify-between gap-space-md p-space-md bg-surface-container-low rounded-xl">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Menampilkan <span class="font-bold text-on-surface">8</span> dari <span class="font-bold text-on-surface">142</span> naskah arsip digital
+      </p>
+<div class="flex items-center gap-2">
+<button class="w-9 h-9 rounded-lg bg-surface-container-lowest text-on-surface-variant flex items-center justify-center hover:bg-surface-container-high transition-colors shadow-sm disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-9 h-9 rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center shadow-sm">1</button>
+<button class="w-9 h-9 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md flex items-center justify-center hover:bg-surface-container-high transition-colors shadow-sm">2</button>
+<button class="w-9 h-9 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md flex items-center justify-center hover:bg-surface-container-high transition-colors shadow-sm">3</button>
+<span class="px-1 text-on-surface-variant">...</span>
+<button class="w-9 h-9 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md flex items-center justify-center hover:bg-surface-container-high transition-colors shadow-sm">18</button>
+<button class="w-9 h-9 rounded-lg bg-surface-container-lowest text-on-surface flex items-center justify-center hover:bg-surface-container-high transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Infographic Metrics & Reading Culture Strip -->
+
+<!-- Repository Submission / Callout Banner -->
+<section class="w-full max-w-[1440px] mx-auto px-margin mb-space-xl">
+
+</section>
+<!-- Interactive Search / Filter Client Script -->
+
+</div>
+@endverbatim

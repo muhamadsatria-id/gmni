@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap');
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+
+    --color-brand: #ffce00;
+    --color-brand-dark: #e5b900;
+    --color-ink: #0a0a0a;
+    --color-ink-soft: #1f1f1f;
+    --color-paper: #f7f5ee;
+    --color-surface: #fafaf8;
+    --color-line: #e5e7eb;
+    --color-muted: #5b616e;
+    --color-accent: #b70011;
+    --color-accent-soft: #b52619;
+
+    --color-background: #fbf8fc;
+    --color-error: #ba1a1a;
+    --color-error-container: #ffdad6;
+    --color-inverse-on-surface: #f3f0f4;
+    --color-inverse-primary: #ffb4ab;
+    --color-inverse-surface: #303033;
+    --color-on-background: #1b1b1e;
+    --color-on-error: #ffffff;
+    --color-on-error-container: #93000a;
+    --color-on-primary: #ffffff;
+    --color-on-primary-container: #fff6f5;
+    --color-on-primary-fixed: #410002;
+    --color-on-primary-fixed-variant: #93000b;
+    --color-on-secondary: #ffffff;
+    --color-on-secondary-container: #610000;
+    --color-on-secondary-fixed: #410000;
+    --color-on-secondary-fixed-variant: #920703;
+    --color-on-surface: #1b1b1e;
+    --color-on-surface-variant: #5c403c;
+    --color-on-tertiary: #ffffff;
+    --color-on-tertiary-container: #fff7f1;
+    --color-on-tertiary-fixed: #2a1700;
+    --color-on-tertiary-fixed-variant: #653e00;
+    --color-outline: #916f6b;
+    --color-outline-variant: #e6bdb8;
+    --color-primary: #b70011;
+    --color-primary-container: #dc2626;
+    --color-primary-fixed: #ffdad6;
+    --color-primary-fixed-dim: #ffb4ab;
+    --color-secondary: #b52619;
+    --color-secondary-container: #ff5c47;
+    --color-secondary-fixed: #ffdad4;
+    --color-secondary-fixed-dim: #ffb4a8;
+    --color-surface: #fbf8fc;
+    --color-surface-bright: #fbf8fc;
+    --color-surface-container: #f0edf1;
+    --color-surface-container-high: #eae7eb;
+    --color-surface-container-highest: #e4e1e6;
+    --color-surface-container-low: #f6f2f7;
+    --color-surface-container-lowest: #ffffff;
+    --color-surface-dim: #dcd9dd;
+    --color-surface-tint: #bf0715;
+    --color-surface-variant: #e4e1e6;
+    --color-tertiary: #7f4f00;
+    --color-tertiary-container: #a06500;
+    --color-tertiary-fixed: #ffddb8;
+    --color-tertiary-fixed-dim: #ffb95f;
+
+    --spacing-gutter: 1.5rem;
+    --spacing-gutter-mobile: 1rem;
+    --spacing-margin: 2rem;
+    --spacing-margin-mobile: 1rem;
+    --spacing-space-lg: 1.5rem;
+    --spacing-space-md: 1rem;
+    --spacing-space-sm: 0.5rem;
+    --spacing-space-xl: 2.5rem;
+    --spacing-space-xs: 0.25rem;
+
+    --font-body-lg: 'Inter', sans-serif;
+    --font-body-md: 'Inter', sans-serif;
+    --font-body-sm: 'Inter', sans-serif;
+    --font-headline-lg: 'Plus Jakarta Sans', sans-serif;
+    --font-headline-lg-mobile: 'Plus Jakarta Sans', sans-serif;
+    --font-headline-md: 'Plus Jakarta Sans', sans-serif;
+    --font-headline-sm: 'Plus Jakarta Sans', sans-serif;
+    --font-headline-xl: 'Plus Jakarta Sans', sans-serif;
+    --font-headline-xl-mobile: 'Plus Jakarta Sans', sans-serif;
+    --font-label-lg: 'Plus Jakarta Sans', sans-serif;
+    --font-label-md: 'Plus Jakarta Sans', sans-serif;
+    --font-label-sm: 'Plus Jakarta Sans', sans-serif;
+
+    --text-body-lg: 18px;
+    --text-body-lg--line-height: 28px;
+    --text-body-lg--letter-spacing: -0.01em;
+    --text-body-lg--font-weight: 400;
+    --text-body-md: 15px;
+    --text-body-md--line-height: 24px;
+    --text-body-md--letter-spacing: 0em;
+    --text-body-md--font-weight: 400;
+    --text-body-sm: 13px;
+    --text-body-sm--line-height: 20px;
+    --text-body-sm--letter-spacing: 0.005em;
+    --text-body-sm--font-weight: 400;
+    --text-headline-lg: 36px;
+    --text-headline-lg--line-height: 44px;
+    --text-headline-lg--letter-spacing: -0.025em;
+    --text-headline-lg--font-weight: 700;
+    --text-headline-lg-mobile: 26px;
+    --text-headline-lg-mobile--line-height: 34px;
+    --text-headline-lg-mobile--letter-spacing: -0.02em;
+    --text-headline-lg-mobile--font-weight: 700;
+    --text-headline-md: 24px;
+    --text-headline-md--line-height: 32px;
+    --text-headline-md--letter-spacing: -0.02em;
+    --text-headline-md--font-weight: 700;
+    --text-headline-sm: 18px;
+    --text-headline-sm--line-height: 26px;
+    --text-headline-sm--letter-spacing: -0.01em;
+    --text-headline-sm--font-weight: 600;
+    --text-headline-xl: 48px;
+    --text-headline-xl--line-height: 56px;
+    --text-headline-xl--letter-spacing: -0.03em;
+    --text-headline-xl--font-weight: 800;
+    --text-headline-xl-mobile: 32px;
+    --text-headline-xl-mobile--line-height: 40px;
+    --text-headline-xl-mobile--letter-spacing: -0.025em;
+    --text-headline-xl-mobile--font-weight: 800;
+    --text-label-lg: 14px;
+    --text-label-lg--line-height: 20px;
+    --text-label-lg--letter-spacing: 0.01em;
+    --text-label-lg--font-weight: 600;
+    --text-label-md: 12px;
+    --text-label-md--line-height: 16px;
+    --text-label-md--letter-spacing: 0.02em;
+    --text-label-md--font-weight: 600;
+    --text-label-sm: 10px;
+    --text-label-sm--line-height: 14px;
+    --text-label-sm--letter-spacing: 0.06em;
+    --text-label-sm--font-weight: 700;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+        background-color: #ffffff;
+        color: var(--color-ink);
+        font-family: var(--font-sans);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    img,
+    svg,
+    video {
+        display: block;
+        max-width: 100%;
+    }
+
+    :focus-visible {
+        outline: 2px solid var(--color-accent);
+        outline-offset: 2px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+            scroll-behavior: auto !important;
+        }
+    }
+}
+
+@layer components {
+    .reference-page .rounded {
+        border-radius: 0.125rem;
+    }
+
+    .reference-page .rounded-lg {
+        border-radius: 0.25rem;
+    }
+
+    .reference-page .rounded-xl {
+        border-radius: 0.5rem;
+    }
+
+    .reference-page .rounded-full {
+        border-radius: 0.75rem;
+    }
+
+    .reference-page .material-symbols-outlined {
+        font-family: 'Material Symbols Outlined';
+        font-style: normal;
+        font-weight: normal;
+        line-height: 1;
+        letter-spacing: normal;
+        text-transform: none;
+        white-space: nowrap;
+        word-wrap: normal;
+        direction: ltr;
+        font-feature-settings: 'liga';
+        -webkit-font-feature-settings: 'liga';
+        -webkit-font-smoothing: antialiased;
+    }
+
+    [data-filter][aria-pressed='true'],
+    [data-tab][aria-selected='true'] {
+        background-color: var(--color-ink);
+        color: #ffffff;
+    }
+}
